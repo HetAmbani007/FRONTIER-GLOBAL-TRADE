@@ -24,7 +24,7 @@ export default function ServicesPage() {
       {/* HERO SECTION */}
       <section className="relative min-h-[650px] lg:h-[650px] flex items-center overflow-hidden">
         <Image
-          src="/images/services-hero.jpg"
+          src="/images/service.png"
           alt="Logistics Hub"
           fill
           priority
@@ -55,16 +55,16 @@ export default function ServicesPage() {
                 <ArrowRight size={18} />
               </button>
 
-              <button className="w-full sm:w-auto border border-white/30 hover:bg-white/10 transition px-6 sm:px-8 py-4 rounded-xl font-semibold">
+              {/* <button className="w-full sm:w-auto border border-white/30 hover:bg-white/10 transition px-6 sm:px-8 py-4 rounded-xl font-semibold">
                 Speak to Expert
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* STATS SECTION */}
-      <section className="-mt-10 sm:-mt-12 lg:-mt-16 relative z-20 px-6 sm:px-8 lg:px-8">
+      {/* <section className="-mt-10 sm:-mt-12 lg:-mt-16 relative z-20 px-6 sm:px-8 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {[
             {
@@ -104,7 +104,7 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* CORE SERVICES */}
       <section className="py-20 sm:py-24 lg:py-28 bg-slate-50">

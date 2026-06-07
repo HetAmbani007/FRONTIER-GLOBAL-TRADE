@@ -17,21 +17,25 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+      <header className="absolute top-0 left-0 w-full z-50 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <h1 className="text-2xl font-bold text-slate-900 tracking-tight">
+            <h1 className="text-2xl font-bold text-white tracking-tight">
               Frontier Global Trade
             </h1>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <Link
                   key={item.label}
                   href={item.path}
-                  className="text-sm font-medium text-slate-700 hover:text-blue-600 transition-all duration-200"
+                  className={`text-sm font-medium transition-all duration-200 ${
+                    index === 0
+                      ? "text-white border-b-2 border-white pb-1"
+                      : "text-white/80 hover:text-white"
+                  }`}
                 >
                   {item.label}
                 </Link>
@@ -39,20 +43,20 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop Buttons */}
-            <div className="hidden md:flex items-center gap-4">
-              <button className="text-sm font-medium text-slate-700 hover:text-blue-600 transition">
+            {/* <div className="hidden md:flex items-center gap-4">
+              <button className="text-sm font-medium text-white hover:bg-white/10 px-4 py-2 rounded-lg transition">
                 Login
               </button>
 
-              <button className="bg-slate-900 text-white px-5 py-3 rounded-xl text-sm font-semibold hover:bg-blue-600 transition-all duration-300 shadow-sm">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all duration-300">
                 Track Shipment
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile Hamburger */}
             <button
               onClick={() => setIsOpen(true)}
-              className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 transition"
+              className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl border border-white/20 text-white hover:bg-white/10 transition"
             >
               <Menu size={22} />
             </button>
