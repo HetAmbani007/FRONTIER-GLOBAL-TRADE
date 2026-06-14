@@ -98,10 +98,10 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-gray-600 leading-7 sm:leading-8 text-base sm:text-lg">
-                Founded in 1999, GlobalLogix started as a regional freight
-                forwarding firm with a single warehouse. Today, we stand as a
-                global leader in supply chain management, driving trade through
-                sophisticated technology and human ingenuity.
+                Founded in 1999, Frontier Global Trade started as a regional
+                freight forwarding firm with a single warehouse. Today, we stand
+                as a global leader in supply chain management, driving trade
+                through sophisticated technology and human ingenuity.
               </p>
 
               <p className="text-gray-600 leading-7 sm:leading-8 text-base sm:text-lg mt-5 sm:mt-6">
@@ -153,42 +153,70 @@ export default function AboutPage() {
       {/* Global Presence */}
       <section className="py-16 sm:py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">
-              Global Presence
+              Meet Our Leadership
             </h2>
 
-            <p className="mt-4 sm:mt-5 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-              Strategic hubs located in every major trade corridor across the
-              globe.
+            <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              Driven by experience, integrity, and a commitment to global trade
+              excellence.
             </p>
           </div>
 
-          {/* Map Container */}
-          <div className="bg-white rounded-3xl border border-gray-200 shadow-lg p-3 sm:p-5">
-            <div className="relative h-[350px] sm:h-[500px] lg:h-[600px] overflow-hidden rounded-2xl">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSTFKuYLxkDHf9QOUhDvGyG01ZtR9m7CvkuZVxawI6ly9j8Au_pMTGEFiI-xFHIX8aqvB8VRIAqo-l0xNpnLPsrtYuqxmplTT-H8qnz6F-XKUJVnLLhIrkDPsC8D_P8H4MDLNOIHet6zDrvNpkx3VnvSLLZzdV5WYnDGRQkQ_HFldBu3raYuD6bajdr9QVkA_gV1C9y2xn9xiqNxKXVY47sPxZAWo2Wql1TKV6hOCEIZL5T0eHgwbiuUHa5Q1dp6VobadthCZzgfY"
-                alt="World Map"
-                fill
-                className="object-cover opacity-90"
-              />
-
-              {/* Hub Card 1 */}
-              <div className="absolute top-4 left-4 sm:top-10 sm:left-10 bg-white px-3 sm:px-5 py-2 sm:py-3 rounded-xl shadow-lg border flex items-center gap-2 sm:gap-3 max-w-[220px] sm:max-w-none">
-                <span className="w-3 h-3 rounded-full bg-blue-600 shrink-0" />
-
-                <p className="font-medium text-slate-900 text-xs sm:text-sm lg:text-base">
-                  North American Hub (Chicago)
-                </p>
+          <div className="grid md:grid-cols-2 gap-10">
+            {/* Founder */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+              <div className="relative h-[450px]">
+                <Image
+                  src="/images/founder.jpg"
+                  alt="Founder"
+                  fill
+                  className="object-cover"
+                />
               </div>
 
-              {/* Hub Card 2 */}
-              <div className="absolute bottom-4 right-4 sm:bottom-16 sm:right-10 bg-white px-3 sm:px-5 py-2 sm:py-3 rounded-xl shadow-lg border flex items-center gap-2 sm:gap-3 max-w-[220px] sm:max-w-none">
-                <span className="w-3 h-3 rounded-full bg-blue-600 shrink-0" />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  John Anderson
+                </h3>
 
-                <p className="font-medium text-slate-900 text-xs sm:text-sm lg:text-base">
-                  Asia-Pacific Center (Singapore)
+                <p className="text-blue-600 font-medium mt-2">
+                  Founder & Managing Director
+                </p>
+
+                <p className="mt-4 text-gray-600 leading-7">
+                  With over 20 years of experience in international trade and
+                  logistics, John has successfully built a global network that
+                  connects businesses across continents.
+                </p>
+              </div>
+            </div>
+
+            {/* CEO */}
+            <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+              <div className="relative h-[450px]">
+                <Image
+                  src="/images/ceo.jpg"
+                  alt="CEO"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-slate-900">
+                  Sarah Williams
+                </h3>
+
+                <p className="text-blue-600 font-medium mt-2">
+                  Chief Executive Officer
+                </p>
+
+                <p className="mt-4 text-gray-600 leading-7">
+                  Sarah leads Frontier Global Trade with a vision focused on
+                  innovation, sustainable logistics solutions, and
+                  customer-centric global operations.
                 </p>
               </div>
             </div>

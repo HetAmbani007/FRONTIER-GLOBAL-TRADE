@@ -3,12 +3,6 @@ import { Monitor, ShieldCheck, HeadphonesIcon, BadgeCheck } from "lucide-react";
 
 const features = [
   {
-    icon: Monitor,
-    title: "Advanced Tracking",
-    description:
-      "Real-time GPS and milestone tracking for every shipment accessible 24/7.",
-  },
-  {
     icon: ShieldCheck,
     title: "Full Compliance",
     description:
@@ -30,7 +24,7 @@ export default function WhyChooseUs() {
           {/* Left */}
           <div>
             <h2 className="text-5xl font-bold text-slate-900 leading-tight">
-              Why Industry Leaders Trust GlobalLogix
+              Why Industry Leaders Trust Frontier Global Trade
             </h2>
 
             <p className="mt-8 text-lg text-gray-600 leading-8">
@@ -67,10 +61,10 @@ export default function WhyChooseUs() {
           <div className="relative">
             <div className="relative rounded-[32px] overflow-hidden shadow-2xl">
               <Image
-                src="/images/person.png"
+                src="/images/govt-approved.png"
                 alt="Manager"
-                width={700}
-                height={700}
+                width={400}
+                height={400}
                 className="w-full h-full object-cover"
               />
 
@@ -80,7 +74,7 @@ export default function WhyChooseUs() {
                   <BadgeCheck className="text-blue-600 w-6 h-6" />
 
                   <span className="font-semibold text-slate-900">
-                    Certified International Logistics Partner
+                    Government-Approved Logistics Partner
                   </span>
                 </div>
               </div>

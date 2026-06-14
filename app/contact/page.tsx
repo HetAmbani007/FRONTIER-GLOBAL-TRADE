@@ -167,11 +167,11 @@ export default function ContactPage() {
                     </p>
 
                     <h4 className="text-lg sm:text-xl font-bold text-slate-900 mt-1 break-words">
-                      +1 (800) LOGIX-GLOBAL
+                      +91 9723278451
                     </h4>
 
                     <p className="text-gray-600 mt-1 text-sm sm:text-base">
-                      Mon - Fri, 24/5 Operations
+                      Mon - Fri, 10:00 AM - 7:00 PM Operations
                     </p>
                   </div>
                 </div>
@@ -188,32 +188,34 @@ export default function ContactPage() {
                     </p>
 
                     <h4 className="text-base sm:text-lg font-bold text-slate-900 mt-1 break-all">
-                      solutions@globallogix.com
+                      srfrontierglobaltrade@gmail.com
                     </h4>
-
-                    <p className="text-gray-600 mt-1 break-all text-sm sm:text-base">
-                      info@globallogix.com
-                    </p>
                   </div>
                 </div>
 
                 {/* Address */}
                 <div className="flex items-start gap-4 sm:gap-5">
-                  <div className="min-w-[56px] w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                  <a
+                    href="https://share.google/ImuL2eiUKPdLiJs01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="min-w-[56px] w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition cursor-pointer"
+                  >
                     <MapPin className="text-blue-600" />
-                  </div>
+                  </a>
 
                   <div>
                     <p className="text-sm uppercase tracking-wide text-gray-500">
-                      Global Headquarters
+                      Frontier Global Trade HQ
                     </p>
 
                     <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-7 sm:leading-8 mt-1">
-                      One Logistics Plaza,
+                      12,1224 Zion Z1,
                       <br />
-                      Suite 400
+                      Sindhu bhavan road,nr.Maple Country Road,Bodakdev,
+                      Ahmedabad-380058
                       <br />
-                      Singapore, 018981
+                      Gujarat, India
                     </h4>
                   </div>
                 </div>
@@ -221,25 +223,6 @@ export default function ContactPage() {
             </div>
 
             {/* Map */}
-            <div className="relative h-[260px] sm:h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg">
-              <Image
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0hGgDsAeXdGcR9lJtyse4zfDGovDmFK-IJSb0ZPaum6o5RGYM3iTxWnCKa3hbjMvtLAct5kblHB2ED1wW-Zmg3Ovu6B2_FXc_xzqq9XNMcNhUFAEM-EQQaw1CLAj4EhzH50VYh8mKZwRL1f0Ny1x46WBiCb5XQM6Nb-K5NV6lIlnDtc5GwcXtDVE9Is7kiKDXTSqEoJlMVDdNHgs3VGLEqxKzla7O5KANhFcj0iE49p9TySABDP3kPGT4zB-EbmBddOClJf9cHYM"
-                alt="Map"
-                fill
-                className="object-cover"
-              />
-
-              <div className="absolute inset-0 bg-slate-950/10" />
-
-              {/* Map Button */}
-              <div className="absolute bottom-4 left-4 right-4 sm:right-auto bg-white px-4 sm:px-5 py-3 rounded-full shadow-lg flex items-center justify-center sm:justify-start gap-3 border">
-                <MapPin className="w-5 h-5 text-blue-600 fill-blue-600" />
-
-                <span className="font-medium text-slate-900 text-sm sm:text-base">
-                  View in Google Maps
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>

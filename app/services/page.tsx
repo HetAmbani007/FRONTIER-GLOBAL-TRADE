@@ -175,57 +175,40 @@ export default function ServicesPage() {
             </div>
 
             {/* Warehouse */}
-            <div className="lg:col-span-4 bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200">
-              <div className="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center">
-                <Warehouse className="text-slate-800" />
+            <div className="lg:col-span-6 bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                <PackageCheck className="text-blue-600" />
               </div>
 
-              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-6">
-                Warehousing
+              <h3 className="text-3xl font-bold text-slate-900 mt-6">
+                Cargo Management
               </h3>
 
-              <p className="text-slate-600 mt-5 leading-7 sm:leading-8 text-sm sm:text-base">
-                Scalable storage solutions with modern inventory systems and
-                fulfillment operations.
+              <p className="text-slate-600 mt-5 leading-8">
+                Comprehensive cargo handling solutions including shipment
+                coordination, cargo consolidation, documentation support, and
+                secure transportation across international trade routes.
               </p>
+            </div>
 
-              <button className="mt-8 text-blue-600 font-semibold flex items-center gap-2">
-                Learn More
-                <ArrowRight size={18} />
-              </button>
+            <div className="lg:col-span-6 bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-sm">
+              <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                <Truck className="text-blue-600" />
+              </div>
+
+              <h3 className="text-3xl font-bold text-slate-900 mt-6">
+                Logistics Solutions
+              </h3>
+
+              <p className="text-slate-600 mt-5 leading-8">
+                End-to-end logistics services designed to streamline
+                international trade, ensuring efficient movement of goods
+                through reliable transportation networks, customs coordination,
+                and timely delivery.
+              </p>
             </div>
 
             {/* Last Mile */}
-            <div className="lg:col-span-8 bg-slate-100 rounded-3xl p-6 sm:p-8 lg:p-10 border border-slate-200 flex flex-col lg:flex-row gap-8 lg:gap-10 items-center">
-              <div className="flex-1">
-                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
-                  <Truck className="text-blue-600" />
-                </div>
-
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-6">
-                  Last Mile Delivery
-                </h3>
-
-                <p className="text-slate-600 mt-5 leading-7 sm:leading-8 text-sm sm:text-base">
-                  Rapid localized distribution to your customer’s doorstep with
-                  unmatched reliability and visibility.
-                </p>
-
-                <button className="mt-8 text-blue-600 font-semibold flex items-center gap-2">
-                  Learn More
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-
-              <div className="w-full lg:w-[320px] h-[220px] relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/delivery.jpg"
-                  alt="Delivery"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -233,43 +216,45 @@ export default function ServicesPage() {
       {/* VALUE SERVICES */}
       <section className="py-20 sm:py-24 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
-          <div className="flex items-start sm:items-center gap-4 mb-14 sm:mb-16">
-            <div className="w-2 h-14 sm:h-16 bg-blue-600 rounded-full shrink-0" />
+          {/* Section Header */}
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">
+              Our Export Expertise
+            </h2>
 
-            <div>
-              <p className="uppercase tracking-[4px] text-blue-600 font-semibold text-sm sm:text-base">
-                Premium Support
-              </p>
-
-              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">
-                Value Added Services
-              </h2>
-            </div>
+            <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-8">
+              Delivering premium-quality spices and chemical products to global
+              markets through trusted sourcing, international compliance, and
+              reliable logistics solutions.
+            </p>
           </div>
 
+          {/* Expertise Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {[
               {
-                icon: PackageCheck,
-                title: "Cargo Insurance",
-                desc: "Comprehensive protection against physical loss or damage during transit.",
+                icon: Globe,
+                title: "Premium Spice Exports",
+                desc: "Connecting international buyers with high-quality spices sourced from trusted suppliers and processed to meet global quality standards.",
               },
               {
-                icon: Globe,
-                title: "SC Consulting",
-                desc: "Strategic advisory to optimize your supply chain operations globally.",
+                icon: PackageCheck,
+                title: "Chemical Product Exports",
+                desc: "Reliable export of industrial and specialty chemicals with a strong focus on safety, compliance, and international regulations.",
               },
               {
                 icon: MapPinned,
-                title: "Project Cargo",
-                desc: "Custom logistics for oversized and high-value infrastructure shipments.",
+                title: "Global Trade Solutions",
+                desc: "End-to-end export support including documentation, customs clearance, freight coordination, and worldwide distribution.",
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 hover:shadow-xl transition"
+                className="border border-slate-200 rounded-3xl p-6 sm:p-8 lg:p-10 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white"
               >
-                <item.icon className="text-blue-600" size={42} />
+                <div className="w-14 h-14 rounded-2xl bg-blue-100 flex items-center justify-center">
+                  <item.icon className="text-blue-600" size={32} />
+                </div>
 
                 <h3 className="text-2xl font-bold text-slate-900 mt-6">
                   {item.title}
@@ -327,7 +312,7 @@ export default function ServicesPage() {
           <div className="relative max-w-[500px] mx-auto w-full">
             <div className="aspect-square rounded-full overflow-hidden border border-white/10">
               <Image
-                src="/images/world-map.jpg"
+                src="/images/world.png"
                 alt="World Map"
                 width={700}
                 height={700}

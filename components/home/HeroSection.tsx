@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
     <section className="relative h-[600px] sm:h-[650px] lg:h-[700px] flex items-center overflow-hidden">
-      <Image
-        src="/images/ship.jpg"
-        alt="Cargo Ship"
-        fill
-        priority
-        className="object-cover"
-      />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/intro.mp4" type="video/mp4" />
+      </video>
 
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
 
@@ -29,9 +32,12 @@ export default function HeroSection() {
               Request a Quote
             </button>
 
-            <button className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base">
+            <Link
+              href="/services"
+              className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base"
+            >
               View Services
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import {
   ArrowRight,
   FileText,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function ServicesSection() {
   return (
@@ -42,17 +43,21 @@ export default function ServicesSection() {
                 <Warehouse className="w-7 h-7 text-blue-400" />
               </div>
 
-              <h3 className="text-3xl font-bold">Warehousing & Distribution</h3>
+              <h3 className="text-3xl font-bold">Logistics Solutions</h3>
 
               <p className="mt-4 text-gray-200 max-w-xl leading-7">
-                State-of-the-art storage facilities with real-time inventory
-                tracking and global distribution networks.
+                Comprehensive logistics services designed to streamline
+                transportation, optimize supply chains, and ensure seamless
+                delivery across global markets.
               </p>
 
-              <button className="mt-8 inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-4 transition-all">
+              <Link
+                className="mt-8 inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-4 transition-all"
+                href="/services"
+              >
                 Explore Service
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
           </div>
 

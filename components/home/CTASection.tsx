@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTASection() {
   return (
     <section className="relative overflow-hidden bg-slate-950 py-28">
@@ -16,18 +18,17 @@ export default function CTASection() {
         </h2>
 
         <p className="mt-8 text-xl text-gray-300 leading-8 max-w-3xl mx-auto">
-          Get a customized logistics assessment and discover how GlobalLogix can
-          optimize your international supply chain today.
+          Get a customized logistics assessment and discover how Frontier Global
+          Trade can optimize your international supply chain today.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
-          <button className="bg-blue-600 hover:bg-blue-700 transition px-10 py-5 rounded-2xl text-white font-semibold shadow-xl">
-            Get a Free Quote
-          </button>
-
-          <button className="border border-white/30 hover:bg-white/10 transition px-10 py-5 rounded-2xl text-white font-semibold">
-            Contact Sales
-          </button>
+          <Link
+            href="/contact"
+            className="border border-white/30 hover:bg-white/10 transition px-10 py-5 rounded-2xl text-white font-semibold inline-block"
+          >
+            Contact Us
+          </Link>
         </div>
       </div>
     </section>
