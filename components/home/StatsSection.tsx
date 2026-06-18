@@ -1,14 +1,14 @@
 const stats = [
   {
-    value: "120+",
+    value: "30",
     label: "Countries Served",
   },
   {
-    value: "15k+",
+    value: "100+",
     label: "Global Agents",
   },
   {
-    value: "2M+",
+    value: "1M+",
     label: "Tons Moved",
   },
   {

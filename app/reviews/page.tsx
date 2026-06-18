@@ -46,11 +46,11 @@ const stats = [
     label: "On-Time Delivery",
   },
   {
-    value: "140+",
+    value: "30+",
     label: "Countries Served",
   },
   {
-    value: "12k+",
+    value: "200+",
     label: "Trusted Partners",
   },
   {
@@ -215,10 +215,10 @@ export default function ReviewsPage() {
       </section>
 
       {/* Review Form */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-100">
+      {/* <section className="py-16 sm:py-20 lg:py-24 bg-gray-100">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left */}
+     
             <div>
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 leading-tight">
                 Share Your Experience
@@ -248,7 +248,6 @@ export default function ReviewsPage() {
               </div>
             </div>
 
-            {/* Form */}
             <div className="bg-white rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 lg:p-10 shadow-xl">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -314,7 +313,7 @@ export default function ReviewsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Stats */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white">

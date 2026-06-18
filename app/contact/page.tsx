@@ -1,9 +1,80 @@
+"use client";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import { toast } from "sonner";
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    goodsType: "General Cargo",
+    origin: "",
+    destination: "",
+    message: "",
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          goods_type: formData.goodsType,
+          origin: formData.origin,
+          destination: formData.destination,
+          message: formData.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
+
+      toast.success(
+        "Thank you for your inquiry! Our team will contact you shortly.",
+      );
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        goodsType: "General Cargo",
+        origin: "",
+        destination: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error("Unable to submit your request. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <main className="bg-white overflow-hidden">
       <Navbar />
@@ -53,7 +124,7 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name + Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -63,8 +134,12 @@ export default function ContactPage() {
 
                   <input
                     type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                     placeholder="John Doe"
-                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 transition"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
                   />
                 </div>
 
@@ -75,13 +150,51 @@ export default function ContactPage() {
 
                   <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     placeholder="john@company.com"
-                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 transition"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
                   />
                 </div>
               </div>
 
-              {/* Goods Type */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block mb-2 font-medium text-gray-700">
+                    Company Name
+                  </label>
+
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    required
+                    placeholder="ABC Exports Pvt Ltd"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
+                  />
+                </div>
+
+                <div>
+                  <label className="block mb-2 font-medium text-gray-700">
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    required
+                    placeholder="+91 9876543210"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
+                  />
+                </div>
+              </div>
+
+              {/* Goods Type
               <div>
                 <label className="block mb-2 font-medium text-gray-700">
                   Type of Goods
@@ -94,7 +207,9 @@ export default function ContactPage() {
                   <option>Oversized / Project Cargo</option>
                   <option>High-Value Electronics</option>
                 </select>
-              </div>
+
+
+              </div> */}
 
               {/* Origin + Destination */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -105,8 +220,12 @@ export default function ContactPage() {
 
                   <input
                     type="text"
+                    name="origin"
+                    value={formData.origin}
+                    onChange={handleChange}
+                    required
                     placeholder="Shanghai, CN"
-                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 transition"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
                   />
                 </div>
 
@@ -117,8 +236,12 @@ export default function ContactPage() {
 
                   <input
                     type="text"
+                    name="destination"
+                    value={formData.destination}
+                    onChange={handleChange}
+                    required
                     placeholder="Rotterdam, NL"
-                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 transition"
+                    className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600"
                   />
                 </div>
               </div>
@@ -131,17 +254,22 @@ export default function ContactPage() {
 
                 <textarea
                   rows={5}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   placeholder="Tell us more about your shipment needs..."
-                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 transition resize-none"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 border border-gray-300 rounded-2xl outline-none focus:border-blue-600 resize-none"
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-3 sm:py-4 rounded-2xl text-base sm:text-lg font-semibold active:scale-[0.98]"
+                disabled={loading}
+                className="w-full bg-blue-600 hover:bg-blue-700 transition text-white py-4 rounded-2xl text-lg font-semibold disabled:opacity-50"
               >
-                Submit Quote Request
+                {loading ? "Submitting..." : "Submit Quote Request"}
               </button>
             </form>
           </div>

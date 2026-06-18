@@ -4,15 +4,13 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section className="relative h-[600px] sm:h-[650px] lg:h-[700px] flex items-center overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover"
-      >
-        <source src="/videos/intro.mp4" type="video/mp4" />
-      </video>
+      <Image
+        src="/images/intro.jpg"
+        alt="Cargo Ship"
+        fill
+        priority
+        className="object-cover"
+      />
 
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
 
@@ -28,9 +26,12 @@ export default function HeroSection() {
           </p>
 
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
-            <button className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base">
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base"
+            >
               Request a Quote
-            </button>
+            </Link>
 
             <Link
               href="/services"

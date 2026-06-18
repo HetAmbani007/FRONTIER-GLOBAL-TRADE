@@ -167,57 +167,42 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-10">
             {/* Founder */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-              <div className="relative h-[450px]">
+              <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/founder.jpg"
+                  src="/images/founder.jpeg"
                   alt="Founder"
                   fill
+                  priority
                   className="object-cover"
                 />
               </div>
 
-              <div className="p-8">
+              <div className="px-8 py-6">
                 <h3 className="text-2xl font-bold text-slate-900">
-                  John Anderson
+                  Vedant Gadhvi
                 </h3>
 
-                <p className="text-blue-600 font-medium mt-2">
-                  Founder & Managing Director
-                </p>
-
-                <p className="mt-4 text-gray-600 leading-7">
-                  With over 20 years of experience in international trade and
-                  logistics, John has successfully built a global network that
-                  connects businesses across continents.
+                <p className="mt-2 text-blue-600 font-medium">
+                  Chief Executive Officer
                 </p>
               </div>
             </div>
 
             {/* CEO */}
             <div className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-              <div className="relative h-[450px]">
+              <div className="relative aspect-[4/3] w-full">
                 <Image
-                  src="/images/ceo.jpg"
+                  src="/images/founder.jpeg"
                   alt="CEO"
                   fill
                   className="object-cover"
                 />
               </div>
 
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-slate-900">
-                  Sarah Williams
-                </h3>
+              <div className="px-8 py-6">
+                <h3 className="text-2xl font-bold text-slate-900">Jay Patel</h3>
 
-                <p className="text-blue-600 font-medium mt-2">
-                  Chief Executive Officer
-                </p>
-
-                <p className="mt-4 text-gray-600 leading-7">
-                  Sarah leads Frontier Global Trade with a vision focused on
-                  innovation, sustainable logistics solutions, and
-                  customer-centric global operations.
-                </p>
+                <p className="mt-2 text-blue-600 font-medium">Founder</p>
               </div>
             </div>
           </div>
