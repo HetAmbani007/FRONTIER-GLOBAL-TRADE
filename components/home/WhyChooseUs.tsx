@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Monitor, ShieldCheck, HeadphonesIcon, BadgeCheck } from "lucide-react";
+import { FaBus } from "react-icons/fa";
 
 const features = [
   {
@@ -14,6 +15,12 @@ const features = [
     description:
       "Personalized account management with logistics professionals.",
   },
+  {
+    icon: FaBus,
+    title: "On-Time Delivery",
+    description:
+      "Reliable logistics planning ensures your shipments arrive safely and on schedule.",
+  },
 ];
 
 export default function WhyChooseUs() {
@@ -24,7 +31,7 @@ export default function WhyChooseUs() {
           {/* Left */}
           <div>
             <h2 className="text-5xl font-bold text-slate-900 leading-tight">
-              Why Industry Leaders Trust Frontier Global Trade
+              Why Industry Leaders Trust SR Global Trade
             </h2>
 
             <p className="mt-8 text-lg text-gray-600 leading-8">

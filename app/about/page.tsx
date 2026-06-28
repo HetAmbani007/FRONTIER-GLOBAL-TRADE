@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Globe, Truck, Users, History, BadgeCheck } from "lucide-react";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
+import Link from "next/link";
 
 const stats = [
   {
@@ -47,7 +48,36 @@ export default function AboutPage() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 text-center text-white">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-8">
+          <div className="max-w-2xl text-white">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+              Pioneering Global Commerce
+            </h1>
+
+            <p className="mt-5 sm:mt-6 text-base sm:text-lg text-gray-200 leading-7 sm:leading-8">
+              Bridging continents and cultures through innovative logistics,
+              reliable infrastructure, and an unwavering commitment to
+              excellence.
+            </p>
+
+            {/* <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base"
+              >
+                Request a Quote
+              </Link>
+
+              <Link
+                href="/services"
+                className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold text-sm sm:text-base"
+              >
+                View Services
+              </Link>
+            </div> */}
+          </div>
+        </div>
+        {/* <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 text-center text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
             Pioneering Global Commerce
           </h1>
@@ -56,7 +86,7 @@ export default function AboutPage() {
             Bridging continents and cultures through innovative logistics,
             reliable infrastructure, and an unwavering commitment to excellence.
           </p>
-        </div>
+        </div> */}
       </section>
 
       {/* Stats Section */}
@@ -98,16 +128,20 @@ export default function AboutPage() {
               </h2>
 
               <p className="text-gray-600 leading-7 sm:leading-8 text-base sm:text-lg">
-                Founded in 1999, Frontier Global Trade started as a regional
-                freight forwarding firm with a single warehouse. Today, we stand
-                as a global leader in supply chain management, driving trade
-                through sophisticated technology and human ingenuity.
+                SR Global Trade was established with a clear vision of
+                connecting businesses across international markets through
+                reliable import and export solutions. Specializing in premium
+                spices and chemical products, we are committed to delivering
+                quality, transparency, and customer satisfaction in every
+                shipment.
               </p>
 
               <p className="text-gray-600 leading-7 sm:leading-8 text-base sm:text-lg mt-5 sm:mt-6">
-                Our journey has been defined by our ability to adapt to a
-                changing world, embracing automation while never losing the
-                personal touch that our clients value most.
+                Although we are a growing company, our foundation is built on
+                industry knowledge, strong supplier relationships, and a
+                dedication to meeting global trade standards. We strive to
+                create long-term partnerships by providing dependable service,
+                timely deliveries, and seamless international trade experiences.
               </p>
             </div>
 

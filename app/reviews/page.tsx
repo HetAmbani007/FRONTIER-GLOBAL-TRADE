@@ -7,12 +7,12 @@ import Footer from "@/components/common/Footer";
 
 const testimonials = [
   {
-    name: "Marcus Thorne",
+    name: "Lavkesh Brahmbhatt",
     role: "Director of Operations, EuroTrade Ltd.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuA8Ds9tD0SI-qW_74_I34Y-bGMAo1w2Z9BB6B1L7xUsXc8FbIWITPH-Edk-FUV3YQKFVSAI2SCv2JAzaxBiodMcjZCS7A-Aq-tzcmmb7oyKcJVXWWAIQiKdoXTv3K2Q-CHYMYzXeb0N4mWnSbzHxhHv7wdCdlyNh44s9tdYN_Nga0dx3JVlVSHOEbtrjW1Po9O-6So7TVJ0gQevXzj54ae1xwmjf8kceM_aGqc2DijlVL9ox7sCUzWL7HLa9QI4WnkY5NQF_lKA-dk",
     review:
-      "Frontier Global Trade transformed our supply chain transparency. Their real-time tracking and professional handling of customs cleared our bottlenecks in weeks.",
+      "SR Global Trade transformed our supply chain transparency. Their real-time tracking and professional handling of customs cleared our bottlenecks in weeks.",
   },
   {
     name: "Li Wei",
@@ -20,7 +20,7 @@ const testimonials = [
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuAzSrtZ22uYRrxuJ8wOHJnc6pCKv6osQVkZzi9kPUFFvfS2VHCuekGHmqvELvK4wlYsB93oAjRHe6hOlZQuqnHXnuDIqNta0dlfIjo1E6LQg09CHsbTJtbg1PXfMLNioQbRQLWDVfQVRY70docoayhPIT__PF5QBXxUkY9qaTjtL04I55SVoc3c1bItBvTk2zxQRxt4SBU6Yaxi4HXRiA0ijAjhDyriXagdT4VA8Nzkr7bHL7Exvc6pEipqcIkPagKy09hyuUuAmm0",
     review:
-      "The level of detail in their reporting and the seamless integration with our ERP systems has made Frontier Global Trade indispensable.",
+      "The level of detail in their reporting and the seamless integration with our ERP systems has made SR Global Trade indispensable.",
   },
   {
     name: "Sarah Jenkins",
@@ -112,13 +112,13 @@ export default function ReviewsPage() {
                   </p>
 
                   <div className="mt-8 pt-6 border-t flex items-center gap-4">
-                    <Image
+                    {/* <Image
                       src={item.image}
                       alt={item.name}
                       width={52}
                       height={52}
                       className="rounded-full object-cover"
-                    />
+                    /> */}
 
                     <div>
                       <h4 className="font-semibold text-slate-900 text-sm sm:text-base">
@@ -189,13 +189,13 @@ export default function ReviewsPage() {
                   </p>
 
                   <div className="mt-8 pt-6 border-t flex items-center gap-4">
-                    <Image
+                    {/* <Image
                       src={item.image}
                       alt={item.name}
                       width={52}
                       height={52}
                       className="rounded-full object-cover"
-                    />
+                    /> */}
 
                     <div>
                       <h4 className="font-semibold text-slate-900 text-sm sm:text-base">

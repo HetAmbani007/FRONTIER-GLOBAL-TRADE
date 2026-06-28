@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <h2 className="text-2xl font-bold">Frontier Global Trade</h2>
+            <h2 className="text-2xl font-bold">SR Global Trade</h2>
 
             <p className="mt-4 text-slate-400 leading-7">
               Trusted import-export and logistics solutions connecting
@@ -103,7 +103,7 @@ export default function Footer() {
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/shreeram_global?igsh=MTY0ZTA2dnhqaHh5eg%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"
@@ -121,7 +121,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/sr-frontier-global/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition"
@@ -135,8 +135,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-14 pt-6 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">
-            © {new Date().getFullYear()} Frontier Global Trade. All Rights
-            Reserved.
+            © {new Date().getFullYear()} SR Global Trade. All Rights Reserved.
           </p>
 
           <div className="flex gap-6 text-sm text-slate-500">

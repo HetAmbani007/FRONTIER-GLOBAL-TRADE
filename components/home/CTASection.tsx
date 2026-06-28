@@ -18,8 +18,8 @@ export default function CTASection() {
         </h2>
 
         <p className="mt-8 text-xl text-gray-300 leading-8 max-w-3xl mx-auto">
-          Get a customized logistics assessment and discover how Frontier Global
-          Trade can optimize your international supply chain today.
+          Get a customized logistics assessment and discover how SR Global Trade
+          can optimize your international supply chain today.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">

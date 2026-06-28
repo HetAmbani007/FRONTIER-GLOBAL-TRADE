@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -23,10 +24,17 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
+
             <Link href="/">
-              <h1 className="text-2xl font-bold text-white tracking-tight cursor-pointer">
-                Frontier Global Trade
-              </h1>
+              <Image
+                src="/images/SR-new.png"
+                alt="Contact Hero"
+                // fill
+                height={150}
+                width={150}
+                priority
+                className="object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -79,7 +87,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 py-6 border-b border-slate-200">
           <div>
             <h2 className="text-2xl font-bold text-slate-900">
-              Frontier Global Trade
+              SR Global Trade
             </h2>
 
             <p className="text-sm text-slate-500 mt-1">
@@ -128,7 +136,7 @@ export default function Navbar() {
             Terms of Service
           </p>
 
-          <p>© 2026 Frontier Global Trade</p>
+          <p>© 2026 SR Global Trade</p>
         </div>
       </div>
     </>

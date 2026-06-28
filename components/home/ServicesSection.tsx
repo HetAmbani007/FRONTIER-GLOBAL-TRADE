@@ -21,7 +21,7 @@ export default function ServicesSection() {
           </p>
 
           <h2 className="mt-3 text-4xl font-bold text-slate-900">
-            Core Logistics Services
+            Core Expertise
           </h2>
         </div>
 

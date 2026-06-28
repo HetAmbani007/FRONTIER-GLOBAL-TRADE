@@ -76,7 +76,7 @@ export default function ContactPage() {
     }
   };
   return (
-    <main className="bg-white overflow-hidden">
+    <main className=" overflow-hidden">
       <Navbar />
 
       {/* Hero Section */}
@@ -84,18 +84,18 @@ export default function ContactPage() {
         {/* Background */}
         <div className="absolute inset-0">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCck8yPeic7u8B1TcYEO3CONSzBCO_fXvmIzloxoboMl7AWG3MFDbvlSLCU-g3CRBMgPUcLVT8Ok2tIDVeZuCI7rfPlnvxkx6xqDhfCzFehQWvXUuQ07c5iSrgirywyNjpXk5jHpukKpXruL3VQG4jwXsHdruHc48nk6CFH4O_tBW-JkIYw0X1Ej-cMxhQRcA7Y_vZvmnziOQ4nLXG71IwOpnHN1JZau9e1QdxIXCpiED8Co_qlcPqGTiKWhbBzPCHi5hX7NxHksQ4"
+            src="/images/contact.jpeg"
             alt="Contact Hero"
             fill
             priority
-            className="object-cover opacity-40"
+            className="object-cover"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-slate-950/50 to-transparent" />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white py-20">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-8 text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold max-w-3xl leading-tight">
             Contact Our Experts
           </h1>
@@ -338,7 +338,7 @@ export default function ContactPage() {
                     </p>
 
                     <h4 className="text-base sm:text-lg font-bold text-slate-900 leading-7 sm:leading-8 mt-1">
-                      12,1224 Zion Z1,
+                      1224, 12th floor, Zion Z1,
                       <br />
                       Sindhu bhavan road,nr.Maple Country Road,Bodakdev,
                       Ahmedabad-380058
