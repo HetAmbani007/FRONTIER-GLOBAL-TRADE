@@ -185,7 +185,7 @@ export default function ChemicalsPage() {
             >
               All Products
             </button>
-            {chemicalCategories.map((cat: any) => {
+            {chemicalCategories.map((cat) => {
               const isActive = activeFilter === cat.id;
               return (
                 <button
