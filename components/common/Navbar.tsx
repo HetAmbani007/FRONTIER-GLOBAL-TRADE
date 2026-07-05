@@ -25,16 +25,20 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
 
-            <Link href="/">
+            <Link href="/" className="flex items-center gap-3">
               <Image
                 src="/images/SR-new.png"
-                alt="Contact Hero"
-                // fill
-                height={150}
-                width={150}
+                alt="SR Global Trade"
+                width={100}
+                height={100}
                 priority
                 className="object-contain"
               />
+              <div>
+                <h5 className="text-xl lg:text-2xl font-bold text-white leading-none">
+                  SR Global Trade
+                </h5>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}

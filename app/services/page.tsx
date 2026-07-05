@@ -74,7 +74,7 @@ const productIndustries = [
   {
     icon: FlaskConical,
     name: "Industrial & Specialty Chemicals",
-    href: "/services/products/chemicals",
+    href: "/products",
     color: "slate",
     items: [
       "Agrochemicals",
@@ -275,7 +275,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                {/* <Link
+                <Link
                   href={industry.href}
                   className={`mt-8 inline-flex items-center gap-2 font-semibold text-sm group ${
                     industry.color === "amber"
@@ -283,12 +283,12 @@ export default function ServicesPage() {
                       : "text-blue-400"
                   }`}
                 >
-                  Explore Products
+                  Explore More
                   <ArrowRight
                     size={16}
                     className="group-hover:translate-x-1 transition-transform"
                   />
-                </Link> */}
+                </Link>
               </div>
             ))}
           </div>
